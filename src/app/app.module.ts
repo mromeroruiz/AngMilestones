@@ -24,7 +24,8 @@ import { NoteIndexComponent } from './components/note/note-index/note-index.comp
 import { HomeComponent } from '../app/home/home.component';
 import { KidsComponent } from './components/kids/kids.component';
 import { AboutComponent } from './components/about/about.component';
-import { EventsComponent } from './components/events/events.component'
+import { EventsComponent } from './components/events/events.component';
+import { CreatePageComponent } from './create-page/create-page.component'
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
@@ -47,7 +48,8 @@ const routes = [
     HomeComponent,
     KidsComponent,
     AboutComponent,
-    EventsComponent
+    EventsComponent,
+    CreatePageComponent
   ],
   imports: [
     BrowserModule,

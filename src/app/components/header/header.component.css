@@ -2,7 +2,18 @@
     flex: 1 1 auto;
 }
 .nav-btn {
-    margin-right: 0.5em;
-    background-color: #132584;
-    color: lightblue;
+    margin-right: 1.5em;
+    background-color:  #FC4A1A;
+    color: white;
+}
+.mat-toolbar.mat-primary {
+    background: #4ABDAC;
+    color: white;
+}
+.navContainer {
+    width: 100%;
+    margin: 0 auto;
+}
+.logoName {
+    padding-left: 2em;
 }
