@@ -1,3 +1,54 @@
-<p>
-  kids works!
-</p>
+<h1>Index</h1>
+<a mat-raised-button color="primary" routerLink="/kids/create">Create New </a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="About">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let kid" routerLink="/Kids/About/{{kid.KidID}}"> <i class="material-icons">library_books</i></mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="KidID">
+        <mat-header-cell *matHeaderCellDef>Kid #</mat-header-cell>
+        <mat-cell *matCellDef="let kid">{{kid.KidID}}</mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="FName">
+          <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
+          <mat-cell *matCellDef="let kid">{{kid.FName}}</mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="LName">
+            <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+            <mat-cell *matCellDef="let kid">{{kid.LName}}</mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="DOB">
+              <mat-header-cell *matHeaderCellDef>DOB</mat-header-cell>
+              <mat-cell *matCellDef="let kid">{{kid.DOB | date:'fullDate'}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="Age">
+                <mat-header-cell *matHeaderCellDef>Age</mat-header-cell>
+                <mat-cell *matCellDef="let kid">{{kid.Age}}</mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="Gender">
+                  <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
+                  <mat-cell *matCellDef="let kid">{{kid.Gender}}</mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="buttons">
+                  <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                  <mat-cell *matCellDef="let kid">
+                    <i mat-icon class="material-icons">edit</i>
+                    <i class="material-icons">delete</i>
+                  </mat-cell>
+                </ng-container>
+
+  </mat-table>
+</div>

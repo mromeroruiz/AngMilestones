@@ -1,0 +1,30 @@
+<h1>Create a Kid.</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="kidForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="FName" type="FName" required/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="LName" type="LName" required/>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+          <input matInput placeholder="DOB" formControlName="DOB" type="DOB" required/>
+        </mat-form-field>
+      </div>
+      <div>
+          <mat-form-field>
+            <input matInput placeholder="Gender" formControlName="Gender" type="Gender" required/>
+          </mat-form-field>
+        </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Submit</button>
+</form>
+
+<a mat-button routerLink="/kids">Back to List</a>

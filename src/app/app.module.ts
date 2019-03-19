@@ -26,13 +26,22 @@ import { KidsComponent } from './components/kids/kids.component';
 import { AboutComponent } from './components/about/about.component';
 import { EventsComponent } from './components/events/events.component';
 import { CreatePageComponent } from './create-page/create-page.component'
+import { KidsService } from './services/kids.service';
+import { KidCreateComponent } from './components/kid/kid-create/kid-create.component';
+import { KidDetailComponent } from './components/kid/kid-detail/kid-detail.component';
 
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'notes', component: NoteIndexComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'kids', component: KidsComponent },
+  { 
+    path: 'kids', children: [
+    { path: '', component: KidsComponent},  
+    { path: 'create', component: KidCreateComponent },
+    { path: 'about/:id', component: KidDetailComponent}
+    ]
+  },
   { path: 'events', component: EventsComponent },
   { path: 'about', component: AboutComponent },
   { path: '**', component: AboutComponent }
@@ -49,7 +58,9 @@ const routes = [
     KidsComponent,
     AboutComponent,
     EventsComponent,
-    CreatePageComponent
+    CreatePageComponent,
+    KidCreateComponent,
+    KidDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +77,7 @@ const routes = [
   ],
   providers: [
     AuthService,
+    KidsService,
     NotesService
   ],
   bootstrap: [AppComponent]
