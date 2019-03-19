@@ -1,0 +1,32 @@
+<h1>Details</h1>
+<hr>
+
+<div *ngIf="kid">
+  <div>
+    <label for="">KidID:</label>
+    <span>{{kid.KidID}}</span>
+  </div>
+
+  <div>
+      <label for="">First Name:</label>
+      <span>{{kid.FName}}</span>
+  </div>
+
+    <div>
+        <label for="">Last Name:</label>
+        <span>{{kid.LName}}</span>
+    </div>
+
+    <div>
+        <label for="">DOB</label>
+        <span>{{kid.DOB}}</span>
+    </div>
+    <div>
+        <label for="">Gender:</label>
+        <span>{{kid.Gender}}</span>
+    </div>
+
+</div>
+
+<button mat-button color="accent">Edit</button>
+<button mat-button color="primary" routerLink="/kids">Back to List</button>
