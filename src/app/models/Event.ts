@@ -7,4 +7,6 @@ export interface Event {
     EventLocation: string;
     EventComment: string;
     AgeAtEvent: string;
+    FName: string;
+    LName: string;
 }

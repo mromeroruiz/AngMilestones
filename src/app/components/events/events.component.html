@@ -1,39 +1,42 @@
-<h1>Create Event</h1>
-<hr>
+<div class="wrapper">
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="eventForm">
+  <h1>Create Event</h1>
+  <hr>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="eventForm">
   <div>
     <div>
-      <select ng-model="selectedKid">
-        <option ng-repeat="k in kids" value="{{k.FName}} {{k.LName}}">{{k.FName}} {{k.LName}}</option>
-      </select>
+      <!-- <mat-form-field>
+        <mat-label>Select Kid</mat-label>
+        <mat-select formControlName="KidID">
+          <mat-option *ngFor="let kid of kids" [value]="kid.KidID">
+            {{kid.FName}} {{kid.LName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Event Name" formControlName="EventName" type="EventName" required/>
+        <input matInput placeholder="Event Name" formControlName="EventName" type="EventName" required />
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="Date of Event" formControlName="DateOfEvent" type="DateOfEvent" required/>
+        <input matInput placeholder="Date of Event" formControlName="DateOfEvent" type="DateOfEvent" required />
       </mat-form-field>
     </div>
     <div>
-        <mat-form-field>
-          <input matInput placeholder="Event Location" formControlName="EventLocation" type="EventLocation" required/>
-        </mat-form-field>
-      </div>
-      <div>
-          <mat-form-field>
-            <input matInput placeholder="Event Comments" formControlName="EventComment" type="EventComment" required/>
-          </mat-form-field>
-        </div>
+      <mat-form-field>
+        <input matInput placeholder="Event Location" formControlName="EventLocation" type="EventLocation" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Event Comments" formControlName="EventComment" type="EventComment" required />
+      </mat-form-field>
+    </div>
   </div>
   <button mat-raised-button class="nav-btn" type="submit">Create</button>|
   <a mat-button routerLink="/events">Back</a>
 </form>
-
-
-
-
-
+</div>

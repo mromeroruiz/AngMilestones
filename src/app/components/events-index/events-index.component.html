@@ -3,7 +3,7 @@
 <hr>
 
 <div>
-  <mat-table #table [dataSource]="dataSource">
+  <mat-table #table [dataSource]="dataSource" [dataSource]="dataSourceTwo">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
@@ -24,17 +24,17 @@
         
         <ng-container matColumnDef="FName">
             <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
-            <mat-cell *matCellDef="let event">{{kid.FName}}</mat-cell>
+            <mat-cell *matCellDef="let kid">{{kid.FName}}</mat-cell>
           </ng-container>
 
           <ng-container matColumnDef="LName">
             <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
-            <mat-cell *matCellDef="let event">{{kid.LName}}</mat-cell>
+            <mat-cell *matCellDef="let kid">{{kid.LName}}</mat-cell>
           </ng-container>
         
           <ng-container matColumnDef="AgeAtEvent">
               <mat-header-cell *matHeaderCellDef>Age at Event</mat-header-cell>
-              <mat-cell *matCellDef="let event">{{event.AgeAtEvent | date:'fullDate'}}</mat-cell>
+              <mat-cell *matCellDef="let kid">{{event.AgeAtEvent | date:'fullDate'}}</mat-cell>
             </ng-container>
 
                 <ng-container matColumnDef="buttons">
