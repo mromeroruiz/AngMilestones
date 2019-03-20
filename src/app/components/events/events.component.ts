@@ -5,6 +5,10 @@ import { KidsService } from '../../services/kids.service';
 import { Router } from '@angular/router';
 import { Kid } from '../../models/Kid';
 
+export interface Kid {
+  FName: string;
+  LName: string;
+}
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
@@ -21,7 +25,7 @@ export class EventsComponent implements OnInit {
    }
 
   ngOnInit() {
-    
+    this._kidService.getKids().subscribe((kids: Kid[])=> this.kids = kids)
   }
 
   createForm() {
@@ -32,10 +36,6 @@ export class EventsComponent implements OnInit {
       DateOfEvent: new FormControl,
       EventComment: new FormControl
     })
-  }
-
-  getKids(){
-    this._kidService.getKids().subscribe(); 
   }
 
   onSubmit() {

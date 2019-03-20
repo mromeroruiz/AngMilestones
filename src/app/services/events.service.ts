@@ -19,20 +19,20 @@ export class EventsService {
     return this._http.get(`${ApiUrl}/Event/All`, { headers: this.getHeaders() });
   }
 
-  getEvent(){
+  getEvent(id: string){
     return this._http.get(`${ApiUrl}/Event/ByEvent/{id}`, { headers: this.getHeaders() });
   }
 
-  getEventsByKid(){
+  getEventsByKid(id: string){
     return this._http.get(`${ApiUrl}/Event/ByKid/{id}`, { headers: this.getHeaders() });
   }
 
-  putEvent(){
-    return this._http.put(`${ApiUrl}/Event/Edit`, { headers: this.getHeaders() });
+  putEvent(event: Event){
+    return this._http.put(`${ApiUrl}/Event/Edit`, event, { headers: this.getHeaders() });
   }
 
   deleteEvent(){
-    return this._http.delete(`${ApiUrl}/Event/Delete?id={id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${ApiUrl}/Event/Delete/{id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {

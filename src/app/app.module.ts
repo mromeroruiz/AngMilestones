@@ -9,7 +9,8 @@ import {
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatTableModule
+  MatTableModule,
+  MatSelectModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +34,7 @@ import { EventsIndexComponent } from './components/events-index/events-index.com
 import { KidsService } from './services/kids.service';
 import { KidCreateComponent } from './components/kid/kid-create/kid-create.component';
 import { KidDetailComponent } from './components/kid/kid-detail/kid-detail.component';
+import { EventEditComponent } from './components/events/event-edit/event-edit.component';
 
 
 const routes = [
@@ -45,6 +47,7 @@ const routes = [
     path: 'events', children: [
       { path: '', component: EventsIndexComponent},
       { path: 'create', component: EventsComponent },
+      { path: 'edit/:id', component: EventEditComponent},
     ] 
   },
   { 
@@ -73,7 +76,8 @@ const routes = [
     CreatePageComponent,
     EventsIndexComponent,
     KidCreateComponent,
-    KidDetailComponent
+    KidDetailComponent,
+    EventEditComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,8 @@ const routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,
