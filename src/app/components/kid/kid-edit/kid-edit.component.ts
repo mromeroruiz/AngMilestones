@@ -56,7 +56,7 @@ export class KidEditComponent implements OnInit {
 
     };
     this._kidService.updateKid(updateKid).subscribe(d => {
-      this._router.navigate(['/kids']);
+      this._router.navigate(['/home']);
     });
   }
 }
