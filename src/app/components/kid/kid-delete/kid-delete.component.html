@@ -1,0 +1,19 @@
+<h1>Delete</h1>
+
+<h4>Are you sure you want to delete this?</h4>
+
+<hr>
+<div *ngIf="kid">
+  <div>
+    <label for="">First Name: </label>
+    <span>{{kid.FName}}</span>
+  </div>
+  <div>
+    <label for="">Last Name: </label>
+    <span>{{kid.LName}}</span>
+  </div>
+
+</div>
+
+<button mat-button color="warm" (click)="onDelete()">Delete</button> |
+<button mat-button color="primary" routerLink="/kids">Back to List</button>

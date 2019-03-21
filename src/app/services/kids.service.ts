@@ -24,7 +24,15 @@ export class KidsService {
   }
 
   getKid(id: string) {
-    return this._http.get(`${ApiUrl}/Kid/${id}`, { headers: this.getHeaders() });
+    return this._http.get(`${ApiUrl}/Kid/ByKid/${id}`, { headers: this.getHeaders() });
+  }
+
+  updateKid(kid: Kid) {
+    return this._http.put(`${ApiUrl}/Kid/Edit`, kid, { headers: this.getHeaders() });
+  }
+
+  deleteKid(id: number) {
+    return this._http.delete(`${ApiUrl}/Kid/Delete/${id}`, {headers: this.getHeaders() });
   }
 
 }
