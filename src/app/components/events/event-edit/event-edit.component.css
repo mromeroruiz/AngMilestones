@@ -1,0 +1,39 @@
+.wrapper{
+    background-image: url(../../../../assets/pexels-photo-606541.jpeg);
+    position: fixed;
+    height: 100%;  
+    width: 100%;
+}
+h1{
+    color: #4ABDAC;
+   
+    text-shadow:
+    -.5px -.5px 0 brown,
+    .5px -.5px 0 brown,
+    -.5px .5px 0 brown,
+    .5px .5px 0 brown;
+    margin-left: 670px;
+    margin-right: 670px;
+    background-color: rgba(255, 254, 254, 0.60);
+}
+
+form {
+    color: black;
+}
+button{
+    margin-bottom: 50px;
+    color: white;
+    background-color: #FC4A1A;
+   
+}
+a{
+    color: #4ABDAC;
+    background-color: white;
+}
+
+.container{
+    background-color:  rgba(255, 254, 254, 0.60);
+    margin-left: 670px;
+    margin-right: 670px;
+    padding-top: 20px;
+}

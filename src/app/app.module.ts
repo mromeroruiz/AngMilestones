@@ -38,6 +38,8 @@ import { KidDetailComponent } from './components/kid/kid-detail/kid-detail.compo
 import { EventEditComponent } from './components/events/event-edit/event-edit.component';
 import { KidDeleteComponent } from './components/kid/kid-delete/kid-delete.component';
 import { KidEditComponent } from './components/kid/kid-edit/kid-edit.component';
+import { EventsDetailsComponent } from './components/events/events-details/events-details.component';
+import { EventsDeleteComponent } from './components/events/events-delete/events-delete.component';
 
 
 
@@ -52,6 +54,8 @@ const routes = [
       { path: '', component: EventsIndexComponent},
       { path: 'create', component: EventsComponent },
       { path: 'edit/:id', component: EventEditComponent},
+      { path: 'details/:id', component: EventsDetailsComponent},
+      { path: 'delete/:id', component: EventsDeleteComponent},
     ] 
   },
   { 
@@ -86,6 +90,8 @@ const routes = [
     KidDeleteComponent,
     KidDetailComponent,
     KidEditComponent,
+    EventsDetailsComponent,
+    EventsDeleteComponent,
   ],
   imports: [
     BrowserModule,

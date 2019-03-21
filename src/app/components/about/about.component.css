@@ -1,0 +1,7 @@
+div{
+    background-image: url(https://images.pexels.com/photos/346797/pexels-photo-346797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-repeat: no-repeat;
+}

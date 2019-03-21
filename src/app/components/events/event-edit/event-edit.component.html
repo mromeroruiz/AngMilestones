@@ -1,69 +1,72 @@
- <h1>Edit Event</h1>
-<hr>
-  <div *ngIf="event">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editEventForm">
-      <div>
-        <div hidden>
-          <mat-form-field>
-            <input matInput placeholder="EventID" formControlName="EventID" type="EventID" [value]="event.EventID" />
-          </mat-form-field>
-        </div>
-        <div hidden>
-          <mat-form-field>
-            <input matInput placeholder="KidID" formControlName="KidID" type="KidID" [value]="event.KidID" />
-          </mat-form-field>
-        </div>
-        <div hidden>
+ <div class="wrapper">
+
+   <h1>Edit Event</h1>
+  
+   <div *ngIf="event">
+     <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editEventForm">
+       <div class="container">
+         <div hidden>
+           <mat-form-field>
+             <input matInput placeholder="EventID" formControlName="EventID" type="EventID" [value]="event.EventID" />
+            </mat-form-field>
+          </div>
+          <div hidden>
+            <mat-form-field>
+              <input matInput placeholder="KidID" formControlName="KidID" type="KidID" [value]="event.KidID" />
+            </mat-form-field>
+          </div>
+          <div hidden>
             <mat-form-field>
               <input matInput placeholder="Gender" formControlName="Gender" type="Gender" [value]="event.Gender" />
             </mat-form-field>
           </div>
-        <div hidden>
-          <mat-form-field>
-            <input matInput placeholder="KidAgeAtEvent" formControlName="KidAgeAtEvent" type="KidAgeAtEvent"
+          <div hidden>
+            <mat-form-field>
+              <input matInput placeholder="KidAgeAtEvent" formControlName="KidAgeAtEvent" type="KidAgeAtEvent"
               [value]="event.KidAgeAtEvent" />
-          </mat-form-field>
-        </div>
-        <div hidden>
-          <mat-form-field>
-            <input matInput placeholder="FirstName" formControlName="FirstName" type="FirstName"
+            </mat-form-field>
+          </div>
+          <div hidden>
+            <mat-form-field>
+              <input matInput placeholder="FirstName" formControlName="FirstName" type="FirstName"
               [value]="event.FirstName" />
-          </mat-form-field>
-        </div>
-        <div hidden>
-          <mat-form-field>
-            <input matInput placeholder="LastName" formControlName="LastName" type="LastName"
+            </mat-form-field>
+          </div>
+          <div hidden>
+            <mat-form-field>
+              <input matInput placeholder="LastName" formControlName="LastName" type="LastName"
               [value]="event.LastName" />
-          </mat-form-field>
-        </div>
-
-
-        <div>
-          <mat-form-field>
-            <input matInput placeholder="EventName" formControlName="EventName" type="EventName" required
+            </mat-form-field>
+          </div>
+          
+          
+          <div>
+            <mat-form-field>
+              <input matInput placeholder="EventName" formControlName="EventName" type="EventName" required
               [value]="event.EventName" />
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <input matInput placeholder="DateOfEvent" formControlName="DateOfEvent" type="DateOfEvent" required
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput placeholder="DateOfEvent" formControlName="DateOfEvent" type="DateOfEvent" required
               [value]="event.DateOfEvent" />
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <input matInput placeholder="EventLocation" formControlName="EventLocation" type="EventLocation" required
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput placeholder="EventLocation" formControlName="EventLocation" type="EventLocation" required
               [value]="event.EventLocation" />
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <input matInput placeholder="EventComment" formControlName="EventComment" type="EventComment" required
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput placeholder="EventComment" formControlName="EventComment" type="EventComment" required
               [value]="event.EventComment" />
-          </mat-form-field>
+            </mat-form-field>
+          </div>
         </div>
-      </div>
-      <button mat-raised-button class="nav-btn" type="submit">Save</button>|
-    </form>
+      </form>
+    </div>
+    <button mat-raised-button class="nav-btn" type="submit">Save</button> |
+    <a mat-raised-button routerLink="/home">Back</a>
   </div>
-    <a mat-button routerLink="/events">Back</a>

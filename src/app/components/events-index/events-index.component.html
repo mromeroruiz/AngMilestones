@@ -8,19 +8,10 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
     <ng-container matColumnDef="About">
-      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-      <mat-cell *matCellDef="let event"> <i class="material-icons">library_books</i></mat-cell>
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Details</mat-header-cell>
+      <mat-cell *matCellDef="let event"> <i class="material-icons" style="cursor: pointer;" routerLink="/events/details/{{event.EventID}}">library_books</i></mat-cell>
     </ng-container>
-    
-    <ng-container matColumnDef="KidID">
-        <mat-header-cell *matHeaderCellDef>Kid #</mat-header-cell>
-        <mat-cell *matCellDef="let event">{{event.KidID}}</mat-cell>
-      </ng-container>
-  
-      <ng-container matColumnDef="EventID">
-        <mat-header-cell *matHeaderCellDef>Event #</mat-header-cell>
-        <mat-cell *matCellDef="let event">{{event.EventID}}</mat-cell>
-      </ng-container>
+
       
       <ng-container matColumnDef="EventName">
         <mat-header-cell *matHeaderCellDef>Event Name</mat-header-cell>
@@ -43,9 +34,10 @@
         </ng-container>
 
                 <ng-container matColumnDef="buttons">
-                  <mat-header-cell *matHeaderCellDef class="matColumnSize"> </mat-header-cell>
+                  <mat-header-cell *matHeaderCellDef class="matColumnSize">Edit/Delete </mat-header-cell>
                   <mat-cell *matCellDef="let event">
-                    <i mat-icon class="material-icons" routerLink="/events/edit/{{event.EventID}}">edit</i>
+                    <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/edit/{{event.EventID}}">edit</i>
+                    <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/delete/{{event.EventID}}">delete</i>
                   </mat-cell>
                 </ng-container>
 

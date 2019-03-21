@@ -1,0 +1,42 @@
+<h1>Event Details</h1>
+
+<hr>
+<div *ngIf="event">
+  <div>
+    <label for="">First Name: </label>
+    <span>{{event.FirstName}}</span>
+  </div>
+  <br>
+  <div>
+    <label for="">Last Name:  </label>
+    <span>{{event.LastName}}</span>
+  </div>
+  <br>
+  <div>
+    <label for="">Gender: </label>
+    <span>{{event.Gender}}</span>
+  </div>
+  <br>
+  <div>
+    <label for="">Event Name: </label>
+    <span>{{event.EventName}}</span>
+  </div>
+  <br>
+  <div>
+    <label for="">Event Date: </label>
+    <span>{{event.DateOfEvent}}</span>
+  </div>
+  <br>
+  <div>
+    <label for="">Age at Event  :</label>
+    <span>{{event.KidAgeAtEvent}}</span>
+  </div>
+  <br>
+  <div>
+    <label for="">Event Comments: </label>
+    <span>{{event.EventComment}}</span>
+  </div>
+
+</div>
+<br>
+<button mat-raised-button routerLink="/home">Back</button>
