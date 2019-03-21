@@ -37,7 +37,8 @@ export class EventEditComponent implements OnInit {
       FirstName: new FormControl(this.event.FirstName),
       LastName: new FormControl(this.event.LastName),
       KidAgeAtEvent: new FormControl(this.event.KidAgeAtEvent),
-      KidID: new FormControl(this.event.KidID)
+      KidID: new FormControl(this.event.KidID),
+      Gender: new FormControl(this.event.Gender)
 
     });
   }
