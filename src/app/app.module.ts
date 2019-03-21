@@ -9,7 +9,8 @@ import {
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatTableModule
+  MatTableModule,
+  MatSelectModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,8 +34,11 @@ import { EventsIndexComponent } from './components/events-index/events-index.com
 import { KidsService } from './services/kids.service';
 import { KidCreateComponent } from './components/kid/kid-create/kid-create.component';
 import { KidDetailComponent } from './components/kid/kid-detail/kid-detail.component';
+
+import { EventEditComponent } from './components/events/event-edit/event-edit.component';
 import { KidDeleteComponent } from './components/kid/kid-delete/kid-delete.component';
 import { KidEditComponent } from './components/kid/kid-edit/kid-edit.component';
+
 
 
 const routes = [
@@ -47,6 +51,7 @@ const routes = [
     path: 'events', children: [
       { path: '', component: EventsIndexComponent},
       { path: 'create', component: EventsComponent },
+      { path: 'edit/:id', component: EventEditComponent},
     ] 
   },
   { 
@@ -75,7 +80,8 @@ const routes = [
     AboutComponent,
     EventsComponent,
     CreatePageComponent,
-    EventsIndexComponent,
+    EventsIndexComponent,    
+    EventEditComponent,
     KidCreateComponent,
     KidDeleteComponent,
     KidDetailComponent,
@@ -92,7 +98,8 @@ const routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,

@@ -1,10 +1,12 @@
 export interface Event {
-    EventID?: number;
-    KidID?: number;
-    UserID?: number;
+    EventID: number;
+    KidID: number;
     EventName: string;
     DateOfEvent: Date;
     EventLocation: string;
     EventComment: string;
-    AgeAtEvent: string;
+    KidAgeAtEvent: string;
+    FirstName: string;
+    LastName: string;
+    Gender: string;
 }

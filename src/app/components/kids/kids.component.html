@@ -11,8 +11,8 @@
       <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
       <mat-cell *matCellDef="let kid" routerLink="/kids/details/{{kid.KidID}}"> <i class="material-icons">library_books</i></mat-cell>
     </ng-container>
-    
-    <ng-container matColumnDef="KidID">
+
+    <ng-container matColumnDef="KidID">  
         <mat-header-cell *matHeaderCellDef>Kid #</mat-header-cell>
         <mat-cell *matCellDef="let kid">{{kid.KidID}}</mat-cell>
       </ng-container>
@@ -49,6 +49,7 @@
                     <i class="material-icons" routerLink="/kids/delete/{{kid.KidID}}">delete</i>
                   </mat-cell>
                 </ng-container>
+
 
   </mat-table>
 </div>
