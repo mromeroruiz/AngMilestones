@@ -24,7 +24,7 @@ export class KidDeleteComponent implements OnInit {
 
   onDelete() {
     this._kidService.deleteKid(this.kid.KidID).subscribe(() => {
-      this._router.navigate(['/kids'])
+      this._router.navigate(['/home'])
     })
   }
 

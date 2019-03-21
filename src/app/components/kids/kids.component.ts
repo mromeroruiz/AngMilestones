@@ -9,14 +9,17 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./kids.component.css']
 })
 export class KidsComponent implements OnInit {
+  kid: {};
+  dataSource: MatTableDataSource<Kid>;
 
   constructor(private _kidService: KidsService) { }
-  columnNames = ['About', 'KidID', 'FName', 'LName', 'DOB', 'Age', 'Gender', 'buttons'];
-  dataSource: MatTableDataSource<Kid>
+  // columnNames = ['About', 'KidID', 'FName', 'LName', 'DOB', 'Age', 'Gender', 'buttons'];
+  // dataSource: MatTableDataSource<Kid>
 
   ngOnInit() {
-    this._kidService.getKids().subscribe((kids: Kid[]) => {
-      this.dataSource = new MatTableDataSource<Kid>(kids);
+    this._kidService.getKids().subscribe(_kidService => {
+      this.kid = _kidService;
+       this.dataSource = new MatTableDataSource<Kid>();
     });
   }
 
