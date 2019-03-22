@@ -1,0 +1,19 @@
+h1 {
+    color: #4ABDAC;
+}
+
+button{
+    color: white;
+    background-color: #FC4A1A;
+}
+label {
+    color: black;
+    font-weight: bold;
+}
+span{
+    color: black;
+}
+.back{
+    color: #4ABDAC;
+    background-color: white;
+}

@@ -1,17 +1,21 @@
 .wrapper{
     background-image: url(../../../assets/pexels-photo-606541.jpeg);
-    height: 100%;
+    position: fixed;
+    height: 100%;  
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 h1{
     color: #4ABDAC;
    
     text-shadow:
-    -.5px -.5px 0 black,
-    .5px -.5px 0 black,
-    -.5px .5px 0 black,
-    .5px .5px 0 black;
-    margin-left: 600px;
-    margin-right: 600px;
+    -.5px -.5px 0 brown,
+    .5px -.5px 0 brown,
+    -.5px .5px 0 brown,
+    .5px .5px 0 brown;
+    margin-left: 670px;
+    margin-right: 670px;
     background-color: rgba(255, 254, 254, 0.60);
 }
 
@@ -25,5 +29,13 @@ a{
     color: #4ABDAC;
     background-color: white;
 }
+
+.container{
+    background-color:  rgba(255, 254, 254, 0.60);
+    margin-left: 670px;
+    margin-right: 670px;
+   
+}
+
 
     

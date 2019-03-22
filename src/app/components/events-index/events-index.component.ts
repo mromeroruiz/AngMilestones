@@ -11,7 +11,7 @@ import { Event } from '../../models/Event';
 export class EventsIndexComponent implements OnInit {
   
   constructor(private _eventService: EventsService) { }
-  columnNames = ['About', 'KidID', 'EventID', 'EventName', 'FName', 'LName','AgeAtEvent', 'buttons'];
+  columnNames = ['About', 'EventName', 'FName', 'LName','AgeAtEvent', 'buttons'];
   dataSource: MatTableDataSource<Event> 
   
 
