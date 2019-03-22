@@ -32,7 +32,7 @@ export class KidCreateComponent implements OnInit {
 
   onSubmit() {
     this._kidService.createKid(this.kidForm.value).subscribe(data => {
-      this._router.navigate(['/kids']);
+      this._router.navigate(['/home']);
     });
   }
 
