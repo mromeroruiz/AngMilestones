@@ -9,7 +9,7 @@ body, html {
   font-family: 'Shadows Into Light Two', cursive;;
 }
 h1 {
-    color: black;
+    color: rgba(124, 90, 52);
     font-family: 'Shadows Into Light Two', cursive;;
     font-size: 250%;
   }
@@ -23,6 +23,11 @@ h1 {
     width: 100%;
     margin: 0;
     background-color: #DFDCE3;
+    background-image: url(../src/assets/pexels-photo-346796.jpeg);
+    background-size: 100%;
+    position: absolute;
+    background-position: center;
+
 
     
   }
