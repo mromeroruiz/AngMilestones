@@ -1,11 +1,9 @@
-.container {
-    /* text-align: center; */
+/* .container {
     display: flex;
     flex-direction: column;
-    /* width: 1200px; */
+  
   }
    .wrapper {
-    /* width: 1000px; */
      text-align: center;
   } 
   
@@ -30,18 +28,19 @@
   
   .kid-div {
     border-radius: 5px;
-    background-color: white;
+    background-color: rgb(248, 244, 244);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 2px black solid;
+    border: 1px rgba(124, 90, 52) solid;
     text-align: center;
     width: 400px;
     height: 200px;
     padding: 25px;
     display: flex;
     flex-direction: column;
+    font-weight: bold;
   }
   .kid-div:hover {
-      background-color: rgb(229, 238, 241);
+      background-color: white;
 
   }
 
@@ -49,7 +48,7 @@
       float:right;
   }
   a {
-      background-color: #FC4A1A;
+      background-color: rgba(124, 90, 52);
       color: white;
   }
 
@@ -57,9 +56,28 @@
     background-color: rgb(236, 60, 12);
   }
   h1 {
-      color: #4ABDAC;
-  }
 
-  .createnew {
-      text-align: center;
+      color: rgba(124, 90, 52);
+  }
+  h2{
+    font-weight: bold;
+  } */
+  .example-card {
+    max-width: 300px;
+    display: inline-flex;
+    margin: 10px;
+    background-color: rgb(248, 244, 244, .6);
+    
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/noimage_person.png');
+    background-size: cover;
+  }
+  a {
+    background-color: rgba(124, 90, 52);
+    color: white;
+  }
+  button:hover{
+
   }

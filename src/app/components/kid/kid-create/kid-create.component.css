@@ -1,0 +1,38 @@
+.nav-btn{
+    color: white;
+    background-color: rgba(124, 90, 52);
+}
+a {
+    color: rgba(124, 90, 52);
+    background-color: white;
+}
+.wrapper{
+    background-image: url(../../../../assets/pexels-photo-606541.jpeg);
+    position: fixed;
+    height: 100%;  
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1{
+    color: rgba(124, 90, 52);
+   
+    /* text-shadow:
+    -.5px -.5px 0 brown,
+    .5px -.5px 0 brown,
+    -.5px .5px 0 brown,
+    .5px .5px 0 brown; */
+    margin-left: 670px;
+    margin-right: 670px;
+    background-color: rgba(255, 254, 254, 0.60);
+}
+.container{
+    background-color:  rgba(255, 254, 254, 0.80);
+    margin-left: 670px;
+    margin-right: 670px;
+    color: black;
+   
+}
+input::placeholder{
+    color: black;
+}

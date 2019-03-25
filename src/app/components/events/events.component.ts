@@ -40,7 +40,7 @@ export class EventsComponent implements OnInit {
 
   onSubmit() {
     this._eventService.postEvent(this.eventForm.value).subscribe(data => {
-      this._router.navigate(['/events']);
+      this._router.navigate(['/home']);
     });
   }
 
