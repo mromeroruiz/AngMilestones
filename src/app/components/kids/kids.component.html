@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
   <div class="wrapper">
     
@@ -9,60 +9,31 @@
         
         <div class="kid-div" routerLink="../kids/details/{{kids.KidID}}">
           
-          <p>Name: {{ kids.FName }} {{ kids.LName }}</p>
-          <p>Age: {{ kids.Age }} </p>
+          <h2> {{ kids.FName }} {{ kids.LName }}</h2>
+          <p> {{ kids.Age }} </p>
           <p>{{ kids.Gender }}</p>
-          
-          <!-- <mat-table #table [dataSource]="dataSource">
-            <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-            
-            <ng-container matColumnDef="About">
-              <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
-              <mat-cell *matCellDef="let kid" routerLink="/kids/details/{{kid.KidID}}"> <i class="material-icons">library_books</i></mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="KidID">  
-              <mat-header-cell *matHeaderCellDef>Kid #</mat-header-cell>
-              <mat-cell *matCellDef="let kid">{{kid.KidID}}</mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="FName">
-              <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
-              <mat-cell *matCellDef="let kid">{{kid.FName}}</mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="LName">
-              <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
-              <mat-cell *matCellDef="let kid">{{kid.LName}}</mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="DOB">
-              <mat-header-cell *matHeaderCellDef>DOB</mat-header-cell>
-              <mat-cell *matCellDef="let kid">{{kid.DOB | date:'fullDate'}}</mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="Age">
-              <mat-header-cell *matHeaderCellDef>Age</mat-header-cell>
-              <mat-cell *matCellDef="let kid">{{kid.Age}}</mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="Gender">
-              <mat-header-cell *matHeaderCellDef>Gender</mat-header-cell>
-              <mat-cell *matCellDef="let kid">{{kid.Gender}}</mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="buttons">
-              <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-              <mat-cell *matCellDef="let kid">
-                <i mat-icon class="material-icons" routerLink="/kids/edit/{{kid.KidID}}">edit</i>
-                <i class="material-icons" routerLink="/kids/delete/{{kid.KidID}}">delete</i>
-              </mat-cell>
-            </ng-container>            
-          </mat-table>           -->
+
         </div>
-        
       </li>
     </ul>
   </div>
-</div>
+</div> -->
+<h1 class="title">My Kids
+<br><a mat-raised-button routerLink="/kids/create">Create New</a></h1>
+
+<mat-card *ngFor="let kids of kid" class="example-card">
+  <div class="wrapper">
+
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{kids.FName}} {{kids.LName}}</mat-card-title>
+      <mat-card-subtitle>{{kids.Age}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/noimage_person.png" alt="Photo of Your Kid">
+    <mat-card-actions>
+      <button mat-button routerLink="/kids/details/{{kids.KidID}}">Details</button>
+      <button mat-button routerLink="/kids/edit/{{kids.KidID}}">Edit</button>
+      <button mat-button routerLink="/kids/delete/{{kids.KidID}}">Delete</button>
+    </mat-card-actions>
+  </div>
+</mat-card>

@@ -1,8 +1,18 @@
 a {
-    background-color: #FC4A1A;
+    background-color: rgba(124, 90, 52);
     color: white;
 }
 
 h1{
-    color: #4ABDAC;
+    color: rgba(124, 90, 52);
+}
+
+mat-table{
+    margin-top: 20px;
+    background-color: rgb(248, 244, 244, .6);
+}
+
+mat-header-cell{
+    font-weight: bold;
+    font-size: 15px;
 }

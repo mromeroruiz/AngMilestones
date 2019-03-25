@@ -10,7 +10,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatTableModule,
-  MatSelectModule
+  MatSelectModule,
+  MatCardModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -105,7 +106,8 @@ const routes = [
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [
     AuthService,
