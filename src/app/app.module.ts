@@ -41,6 +41,7 @@ import { KidDeleteComponent } from './components/kid/kid-delete/kid-delete.compo
 import { KidEditComponent } from './components/kid/kid-edit/kid-edit.component';
 import { EventsDetailsComponent } from './components/events/events-details/events-details.component';
 import { EventsDeleteComponent } from './components/events/events-delete/events-delete.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 
@@ -93,6 +94,7 @@ const routes = [
     KidEditComponent,
     EventsDetailsComponent,
     EventsDeleteComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

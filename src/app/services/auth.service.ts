@@ -28,6 +28,7 @@ export class AuthService {
     return this._http.post(`${Api_Url}/Token`, str).subscribe( (token: Token) => {
       localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);
+      localStorage.setItem('isLoggedIn', 'true');
       this._router.navigate(['/']);
     });
   }
@@ -42,6 +43,7 @@ export class AuthService {
   logout(): Observable<Object> {
     localStorage.clear();
     this.isLoggedIn.next(false);
+
     
     return this._http.post(`${Api_Url}/api/Account/Logout`, { headers: this.setHeader() } );
   }
