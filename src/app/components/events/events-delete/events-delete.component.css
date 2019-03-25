@@ -1,11 +1,24 @@
-h1 {
-    color: #4ABDAC;
+h1{
+    color: rgba(124, 90, 52);
+   
+    /* text-shadow:
+    -.5px -.5px 0 brown,
+    .5px -.5px 0 brown,
+    -.5px .5px 0 brown,
+    .5px .5px 0 brown; */
+    margin-left: 670px;
+    margin-right: 670px;
+    background-color: rgba(255, 254, 254, 0.60);
 }
 
 button{
+    margin-bottom: 50px;
     color: white;
-    background-color: #FC4A1A;
+    background-color: rgba(124, 90, 52);
+   
 }
+
+
 label {
     color: black;
     font-weight: bold;
@@ -14,6 +27,6 @@ span{
     color: black;
 }
 .back{
-    color: #4ABDAC;
+    color: rgba(124, 90, 52);
     background-color: white;
 }
