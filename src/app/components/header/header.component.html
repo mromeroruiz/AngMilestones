@@ -6,9 +6,10 @@
       <span class="logoName">Milestones</span>
       <span class="example-fill-remaining-space"></span>
       <button mat-raised-button class="nav-btn" routerLink="/about">About</button>
-      <button mat-raised-button class="nav-btn" routerLink="/home">My Page</button>
-      <button mat-raised-button class="nav-btn" routerLink="/register">Register</button>
-      <button mat-raised-button class="nav-btn" routerLink="/login">Login</button>
+      <button mat-raised-button class="nav-btn" *ngIf="isLoggedIn() === 'true'" routerLink="/home">My Page</button>
+      <button mat-raised-button class="nav-btn" *ngIf="isLoggedIn() !== 'true'" routerLink="/register">Register</button>
+      <button mat-raised-button class="nav-btn" *ngIf="isLoggedIn() !== 'true'" routerLink="/login">Login</button>
+      <button mat-raised-button class="nav-btn"  *ngIf="isLoggedIn() === 'true'" (click)="logout()">Logout</button>
     </mat-toolbar>
     
   </div>
