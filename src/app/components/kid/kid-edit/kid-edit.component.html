@@ -1,50 +1,52 @@
-<h1>Edit a Kid.</h1>
-<hr>
 
-<div *ngIf="kid">
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editKidForm">
-    <div>
-      <div hidden>
-        <mat-form-field>
-          <input matInput placeholder="KidID" formControlName="KidID" type="KidID" required [value]="kid.KidID" />
-        </mat-form-field>
-      </div>
-      
-      
+
+  <h1>Edit a Kid.</h1>
+ 
+  
+  <div class="container" *ngIf="kid">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editKidForm">
       <div>
-        <mat-form-field>
-          <input matInput placeholder="FName" formControlName="FName" type="FName" required [value]="kid.FName" />
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="LName" formControlName="LName" type="LName" required [value]="kid.LName" />
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="Gender" formControlName="Gender" type="Gender" required [value]="kid.Gender" />
-        </mat-form-field>
-      </div>
-      <div>
+        <div hidden>
           <mat-form-field>
-            <input matInput placeholder="DOB" formControlName="DOB" type="Gender" required [value]="kid.DOB" />
+            <input matInput placeholder="KidID" formControlName="KidID" type="KidID" required [value]="kid.KidID" />
           </mat-form-field>
-      </div>
-      <div hidden>
+        </div>
+        
+        
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="FName" formControlName="FName" type="FName" required [value]="kid.FName" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="LName" formControlName="LName" type="LName" required [value]="kid.LName" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="Gender" formControlName="Gender" type="Gender" required [value]="kid.Gender" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput placeholder="DOB" formControlName="DOB" type="Gender" required [value]="kid.DOB | date: 'MM/dd/yyyy'" />
+          </mat-form-field>
+        </div>
+        <div hidden>
           <mat-form-field>
             <input matInput placeholder="Age" formControlName="Age" type="Age" required [value]="kid.Age" />
           </mat-form-field>
-      </div>
-      <div>
+        </div>
+        <div>
           <mat-form-field>
             <input matInput placeholder="About" formControlName="About" type="About" [value]="kid.About" />
           </mat-form-field>
+        </div>
+        
       </div>
-      
-    </div>
-    <button mat-raised-button class="nav-btn" color="primary" type="submit">Save</button>
-  </form>
-</div>
-
-<a mat-button routerLink="/kids/details/{{kid.KidID}}">Back</a>
+      <button mat-raised-button class="nav-btn" type="submit">Save</button> |
+      <a mat-button routerLink="/home">Back</a>
+    </form>
+  </div>
+  

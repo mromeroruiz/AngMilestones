@@ -17,7 +17,13 @@ button{
     background-color: rgba(124, 90, 52);
    
 }
-
+.container{
+    background-color:  rgba(255, 254, 254, 0.80);
+    margin-left: 670px;
+    margin-right: 670px;
+    color: black;
+   
+}
 
 label {
     color: black;

@@ -1,11 +1,11 @@
 <h1>Details</h1>
 <hr>
 
-<div *ngIf="kid">
-  <div>
+<div class="container" *ngIf="kid">
+  <!-- <div>
     <label for="">KidID:</label>
     <span>{{kid.KidID}}</span>
-  </div>
+  </div> -->
 
   <div>
       <label for="">First Name: </label>
@@ -19,7 +19,7 @@
 
     <div>
         <label for="">DOB: </label>
-        <span>{{kid.DOB}}</span>
+        <span>{{kid.DOB | date}}</span>
     </div>
 
     <div>
@@ -31,9 +31,11 @@
         <label for="">Gender: </label>
         <span>{{kid.Gender}}</span>
     </div>
+    <div>
+            <label for="">About: </label>
+            <span>{{kid.About}}</span>
+        </div>
 
 </div>
-
-<button mat-button color="accent" routerLink="/kids/edit/{{kid.KidID}}">Edit</button>
-<button mat-button color="accent" routerLink="/kids/delete/{{kid.KidID}}">Delete</button>
-<button mat-button color="primary" routerLink="/home">Back Home</button>
+<br>
+<button mat-button routerLink="/home">Back</button>

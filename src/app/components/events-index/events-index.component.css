@@ -16,3 +16,7 @@ mat-header-cell{
     font-weight: bold;
     font-size: 15px;
 }
+
+i:hover {
+    background-color: rgba(247, 228, 118, 0.74);
+}

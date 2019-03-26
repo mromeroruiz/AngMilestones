@@ -36,7 +36,7 @@
                 <ng-container matColumnDef="buttons">
                   <mat-header-cell *matHeaderCellDef class="matColumnSize">Edit/Delete </mat-header-cell>
                   <mat-cell *matCellDef="let event">
-                    <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/edit/{{event.EventID}}">edit</i>
+                    <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/edit/{{event.EventID}}">edit</i>  /
                     <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/delete/{{event.EventID}}">delete</i>
                   </mat-cell>
                 </ng-container>

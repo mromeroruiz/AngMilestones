@@ -22,7 +22,7 @@ event: Event;
 
   onDelete(){
     this._eventService.deleteEvent(this.event.EventID).subscribe(() => {
-      this._router.navigate(['/events']);
+      this._router.navigate(['/home']);
     });
   }
 
