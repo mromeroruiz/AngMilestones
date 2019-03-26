@@ -1,17 +1,6 @@
-.wrapper{
-    background-image: url(../../../../assets/pexels-photo-606541.jpeg);
-    position: fixed;
-    height: 100%;  
-    width: 100%;
-}
+
 h1{
     color: rgba(124, 90, 52);
-   
-    /* text-shadow:
-    -.5px -.5px 0 brown,
-    .5px -.5px 0 brown,
-    -.5px .5px 0 brown,
-    .5px .5px 0 brown; */
     margin-left: 670px;
     margin-right: 670px;
     background-color: rgba(255, 254, 254, 0.60);

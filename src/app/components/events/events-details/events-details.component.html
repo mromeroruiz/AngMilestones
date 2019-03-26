@@ -1,7 +1,7 @@
 <h1>Event Details</h1>
 
 <hr>
-<div *ngIf="event">
+<div class="container" *ngIf="event">
   <div>
     <label for="">First Name: </label>
     <span>{{event.FirstName}}</span>
@@ -24,7 +24,7 @@
   <br>
   <div>
     <label for="">Event Date: </label>
-    <span>{{event.DateOfEvent}}</span>
+    <span>{{event.DateOfEvent | date}}</span>
   </div>
   <br>
   <div>
