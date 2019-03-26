@@ -9,7 +9,9 @@ import { AuthService } from '../../services/auth.service';
 })
 export class RegistrationComponent implements OnInit {
 
+
   public _registerForm: FormGroup;
+
 
   constructor(private _form: FormBuilder, private _authService: AuthService) { 
     this.createForm();

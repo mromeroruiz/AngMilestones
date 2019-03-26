@@ -8,3 +8,15 @@
     flex: 1 1 auto;
     background-repeat: no-repeat;
 }
+
+h1 {
+    font-size: 200px;
+     text-shadow: 0 0 3px rgb(241, 230, 63), 0 0 5px rgb(255, 123, 0);
+     margin-bottom: 0;
+}
+h4 {
+    padding-bottom: 30px;
+}
+.container {
+    background-color: rgba(248, 244, 244, 0.384);
+}
