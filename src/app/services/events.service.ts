@@ -13,27 +13,27 @@ export class EventsService {
   constructor(private _http: HttpClient) { }
 
   postEvent(event: Event){
-    return this._http.post(`${APIURL}/Event/Create`, event, { headers: this.getHeaders() });
+    return this._http.post(`${APIURL}/api/Event/Create`, event, { headers: this.getHeaders() });
   }
 
   getEvents(){
-    return this._http.get(`${APIURL}/Event/All`, { headers: this.getHeaders() });
+    return this._http.get(`${APIURL}/api/Event/All`, { headers: this.getHeaders() });
   }
 
   getEvent(id: string){
-    return this._http.get(`${APIURL}/Event/ByEvent/${id}`, { headers: this.getHeaders() });
+    return this._http.get(`${APIURL}/api/Event/ByEvent/${id}`, { headers: this.getHeaders() });
   }
 
   getEventsByKid(id: string){
-    return this._http.get(`${APIURL}/Event/ByKid/{id}`, { headers: this.getHeaders() });
+    return this._http.get(`${APIURL}/api/Event/ByKid/{id}`, { headers: this.getHeaders() });
   }
 
   putEvent(event: Event){
-    return this._http.put(`${APIURL}/Event/Edit`, event, { headers: this.getHeaders() });
+    return this._http.put(`${APIURL}/api/Event/Edit`, event, { headers: this.getHeaders() });
   }
 
   deleteEvent(id: number){
-    return this._http.delete(`${APIURL}/Event/Delete/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${APIURL}/api/Event/Delete/${id}`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
