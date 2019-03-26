@@ -1,3 +1,41 @@
-<p>
-  events works!
-</p>
+<div class="wrapper">
+
+  <h1>Create Event</h1>
+ 
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="eventForm">
+  <div class="container">
+    <div>
+      <mat-form-field>
+        <mat-label>Select Kid</mat-label>
+        <mat-select formControlName="KidID">
+          <mat-option *ngFor="let kid of kids" [value]="kid.KidID">
+            {{kid.FName}} {{kid.LName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Event Name" formControlName="EventName" type="EventName" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Date of Event" formControlName="DateOfEvent" type="DateOfEvent" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Event Location" formControlName="EventLocation" type="EventLocation" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Event Comments" formControlName="EventComment" type="EventComment" required />
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" type="submit">Create</button> |
+  <a mat-button routerLink="/home">Back</a>
+</form>
+</div>

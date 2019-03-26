@@ -1,0 +1,45 @@
+<h1>Events</h1>
+<a mat-raised-button routerLink="/events/create">Create New </a>
+<br>
+
+<div>
+  <mat-table  #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="About">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize">Details</mat-header-cell>
+      <mat-cell *matCellDef="let event"> <i class="material-icons" style="cursor: pointer;" routerLink="/events/details/{{event.EventID}}">library_books</i></mat-cell>
+    </ng-container>
+
+      
+      <ng-container matColumnDef="EventName">
+        <mat-header-cell *matHeaderCellDef>Event Name</mat-header-cell>
+        <mat-cell *matCellDef="let event">{{event.EventName}}</mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="FName">
+        <mat-header-cell *matHeaderCellDef>First Name</mat-header-cell>
+        <mat-cell *matCellDef="let event">{{event.FirstName}}</mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="LName">
+        <mat-header-cell *matHeaderCellDef>Last Name</mat-header-cell>
+        <mat-cell *matCellDef="let event">{{event.LastName}}</mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="AgeAtEvent">
+          <mat-header-cell *matHeaderCellDef>Age at Event</mat-header-cell>
+          <mat-cell *matCellDef="let event">{{event.KidAgeAtEvent}}</mat-cell>
+        </ng-container>
+
+                <ng-container matColumnDef="buttons">
+                  <mat-header-cell *matHeaderCellDef class="matColumnSize">Edit/Delete </mat-header-cell>
+                  <mat-cell *matCellDef="let event">
+                    <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/edit/{{event.EventID}}">edit</i>  /
+                    <i mat-icon class="material-icons" style="cursor: pointer;" routerLink="/events/delete/{{event.EventID}}">delete</i>
+                  </mat-cell>
+                </ng-container>
+
+  </mat-table>
+</div>

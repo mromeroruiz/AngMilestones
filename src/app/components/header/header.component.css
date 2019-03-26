@@ -3,12 +3,18 @@
 }
 .nav-btn {
     margin-right: 1.5em;
-    background-color:  #FC4A1A;
-    color: white;
+    background-color: #DDCBBD;
+    color: rgba(124, 90, 52, 0.5);
+    font-weight: bold;
+}
+.nav-btn:hover {
+    background-color: #E0CB9E;
+
 }
 .mat-toolbar.mat-primary {
-    background: #4ABDAC;
+    background: rgba(124, 90, 52, 0.5);
     color: white;
+    font-weight: bold;
 }
 .navContainer {
     width: 100%;
@@ -17,3 +23,4 @@
 .logoName {
     padding-left: 2em;
 }
+

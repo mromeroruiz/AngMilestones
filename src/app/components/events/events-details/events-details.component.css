@@ -1,0 +1,32 @@
+h1{
+    color: rgba(124, 90, 52);
+   
+    /* text-shadow:
+    -.5px -.5px 0 brown,
+    .5px -.5px 0 brown,
+    -.5px .5px 0 brown,
+    .5px .5px 0 brown; */
+    margin-left: 670px;
+    margin-right: 670px;
+    background-color: rgba(255, 254, 254, 0.60);
+}
+
+div {
+    color: black;
+}
+button{
+    margin-bottom: 50px;
+    color: white;
+    background-color: rgba(124, 90, 52);
+   
+}
+label{
+    font-weight: bold;
+}
+.container{
+    background-color:  rgba(255, 254, 254, 0.80);
+    margin-left: 670px;
+    margin-right: 670px;
+    color: black;
+   
+}

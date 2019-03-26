@@ -1,0 +1,21 @@
+
+  .example-card {
+    max-width: 300px;
+    display: inline-flex;
+    margin: 10px;
+    background-color: rgb(248, 244, 244, .6);
+     
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/noimage_person.png');
+    background-size: cover;
+  }
+  a {
+    background-color: rgba(124, 90, 52);
+    color: white;
+  }
+
+  button:hover{
+      background-color: rgba(247, 228, 118, 0.74)
+  }

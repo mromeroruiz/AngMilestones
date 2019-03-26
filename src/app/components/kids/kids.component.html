@@ -1,3 +1,21 @@
-<p>
-  kids works!
-</p>
+
+<h1 class="title">My Kids
+<br><a mat-raised-button routerLink="/kids/create">Create New</a></h1>
+
+<mat-card *ngFor="let kids of kid" class="example-card">
+  <div class="wrapper">
+
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{kids.FName}} {{kids.LName}}</mat-card-title>
+      <mat-card-subtitle>{{kids.Gender}}</mat-card-subtitle>
+      <mat-card-subtitle>{{kids.Age}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/noimage_person.png" alt="Photo of Your Kid">
+    <mat-card-actions>
+      <button mat-button routerLink="/kids/details/{{kids.KidID}}">Details</button>
+      <button mat-button routerLink="/kids/edit/{{kids.KidID}}">Edit</button>
+      <button mat-button routerLink="/kids/delete/{{kids.KidID}}">Delete</button>
+    </mat-card-actions>
+  </div>
+</mat-card>

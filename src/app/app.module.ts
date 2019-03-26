@@ -9,7 +9,9 @@ import {
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatTableModule
+  MatTableModule,
+  MatSelectModule,
+  MatCardModule
 } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,13 +29,47 @@ import { AboutComponent } from './components/about/about.component';
 import { EventsComponent } from './components/events/events.component';
 import { CreatePageComponent } from './create-page/create-page.component'
 
+import { EventsService } from './services/events.service';
+import { EventsIndexComponent } from './components/events-index/events-index.component';
+
+import { KidsService } from './services/kids.service';
+import { KidCreateComponent } from './components/kid/kid-create/kid-create.component';
+import { KidDetailComponent } from './components/kid/kid-detail/kid-detail.component';
+
+import { EventEditComponent } from './components/events/event-edit/event-edit.component';
+import { KidDeleteComponent } from './components/kid/kid-delete/kid-delete.component';
+import { KidEditComponent } from './components/kid/kid-edit/kid-edit.component';
+import { EventsDetailsComponent } from './components/events/events-details/events-details.component';
+import { EventsDeleteComponent } from './components/events/events-delete/events-delete.component';
+import { LogoutComponent } from './components/logout/logout.component';
+
+
+
 const routes = [
   { path: 'register', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'notes', component: NoteIndexComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'kids', component: KidsComponent },
-  { path: 'events', component: EventsComponent },
+
+  { 
+    path: 'events', children: [
+      { path: '', component: EventsIndexComponent},
+      { path: 'create', component: EventsComponent },
+      { path: 'edit/:id', component: EventEditComponent},
+      { path: 'details/:id', component: EventsDetailsComponent},
+      { path: 'delete/:id', component: EventsDeleteComponent},
+    ] 
+  },
+  { 
+    path: 'kids', children: [
+    { path: '', component: KidsComponent},  
+    { path: 'create', component: KidCreateComponent },
+    { path: 'details/:id', component: KidDetailComponent},
+    { path: 'edit/:id', component: KidEditComponent },
+    { path: 'delete/:id', component: KidDeleteComponent },
+    ]
+  },
+
   { path: 'about', component: AboutComponent },
   { path: '**', component: AboutComponent }
 ];
@@ -49,7 +85,16 @@ const routes = [
     KidsComponent,
     AboutComponent,
     EventsComponent,
-    CreatePageComponent
+    CreatePageComponent,
+    EventsIndexComponent,    
+    EventEditComponent,
+    KidCreateComponent,
+    KidDeleteComponent,
+    KidDetailComponent,
+    KidEditComponent,
+    EventsDetailsComponent,
+    EventsDeleteComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,10 +107,14 @@ const routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [
     AuthService,
+    EventsService,
+    KidsService,
     NotesService
   ],
   bootstrap: [AppComponent]
