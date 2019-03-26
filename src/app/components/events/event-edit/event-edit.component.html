@@ -1,4 +1,4 @@
- <div class="wrapper">
+
 
    <h1>Edit Event</h1>
   
@@ -49,7 +49,7 @@
           <div>
             <mat-form-field>
               <input matInput placeholder="DateOfEvent" formControlName="DateOfEvent" type="DateOfEvent" required
-              [value]="event.DateOfEvent" />
+              [value]="event.DateOfEvent | date: 'MM/dd/yyyy'" />
             </mat-form-field>
           </div>
           <div>
@@ -69,4 +69,3 @@
         <a mat-raised-button routerLink="/home">Back</a>
       </form>
     </div>
-  </div>

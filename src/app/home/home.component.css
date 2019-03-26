@@ -1,3 +1,10 @@
 h1{
     color: rgba(124, 90, 52);
 }
+.wrapper{
+    background: url(../../assets/pexels-photo-346796.jpeg) no-repeat center center fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+}

@@ -1,23 +1,4 @@
-<!-- <div class="container">
 
-  <div class="wrapper">
-    
-    <h1 class="title">My Kids</h1>
-    <a class="createNew" mat-raised-button routerLink="/kids/create">Create New </a>
-    <ul class="ul-wrapper" *ngIf="kid">
-      <li *ngFor="let kids of kid">
-        
-        <div class="kid-div" routerLink="../kids/details/{{kids.KidID}}">
-          
-          <h2> {{ kids.FName }} {{ kids.LName }}</h2>
-          <p> {{ kids.Age }} </p>
-          <p>{{ kids.Gender }}</p>
-
-        </div>
-      </li>
-    </ul>
-  </div>
-</div> -->
 <h1 class="title">My Kids
 <br><a mat-raised-button routerLink="/kids/create">Create New</a></h1>
 
@@ -27,6 +8,7 @@
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{kids.FName}} {{kids.LName}}</mat-card-title>
+      <mat-card-subtitle>{{kids.Gender}}</mat-card-subtitle>
       <mat-card-subtitle>{{kids.Age}}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="../../../assets/noimage_person.png" alt="Photo of Your Kid">
