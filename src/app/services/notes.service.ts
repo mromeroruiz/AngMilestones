@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { APIURL } from '../../environments/environment.prod'
 
-const ApiUrl = 'kcpelevennoteapie.azurewebsites.net/api';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class NotesService {
   constructor(private _http: HttpClient) { }
 
   getNotes() {
-    return this._http.get(`${ApiUrl}/Notes`, { headers: this.getHeaders() });
+    return this._http.get(`${APIURL}/Notes`, { headers: this.getHeaders() });
   }
 
   private getHeaders() {
