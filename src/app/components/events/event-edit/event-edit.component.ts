@@ -58,7 +58,7 @@ export class EventEditComponent implements OnInit {
       Gender: form.value.Gender
     };
     this._eventService.putEvent(editEvent).subscribe(d => {
-      this._router.navigate(['/events']);
+      this._router.navigate(['/home']);
     });
   }
 
